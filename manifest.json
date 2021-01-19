@@ -1,0 +1,18 @@
+{
+    "name": "CSBridge",
+    "version": "1.0",
+    "description": "A tool",
+    "permissions": [
+        "activeTab", 
+        "declarativeContent", 
+        "storage"
+    ],
+    "background": {
+        "scripts": ["main.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "UI.html"
+    },
+    "manifest_version": 2
+}
