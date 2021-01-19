@@ -5,7 +5,7 @@ chrome.storage.sync.get('color', (data) => {
     changeColor.setAttribute('value', data.color)
 })
 
-changeColor.onclick = (element) => {
+paste.onclick = (element) => {
     let color = element.target.value
     chrome.tabs.query({
         active: true,
