@@ -5,8 +5,11 @@ chrome.storage.sync.get('color', (data) => {
     changeColor.setAttribute('value', data.color)
 })
 
-paste.onclick = (element) => {
-    let color = element.target.value
+paste.onclick = () => {
+    let userName = document.getElementById(input__name)
+    let userAddress = document.getElementById(input__address)
+    let userZip = document.getElementById(input__zip)
+    
     chrome.tabs.query({
         active: true,
         currentWindow: true

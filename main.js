@@ -1,9 +1,10 @@
 let hostName = 'velktri.github.io'
 
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({ color: '#3aa757' }, () => {
-        console.log("The color is green!")
+    chrome.storage.sync.set({ name: '', address: '', zipcode: '' }, () => {
+        console.log("User Storage initialized.")
     })
+
 
     chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
         chrome.declarativeContent.onPageChanged.addRules([{
