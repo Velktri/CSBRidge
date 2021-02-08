@@ -1,16 +1,21 @@
-let changeColor = document.getElementById('changeColor')
+let changeColor = document.getElementById('paste')
 
-chrome.storage.sync.get('color', (data) => {
+//get the data from storage
+
+/*chrome.storage.sync.get('color', (data) => {
     changeColor.style.backgroundColor = data.color
     changeColor.setAttribute('value', data.color)
-})
+})*/
 
 paste.onclick = () => {
     let userName = document.getElementById(input__name)
     let userAddress = document.getElementById(input__address)
     let userZip = document.getElementById(input__zip)
-    
-    chrome.tabs.query({
+
+
+    // Add the data to the HTML here
+
+    /*chrome.tabs.query({
         active: true,
         currentWindow: true
     }, (tabs) => {
@@ -18,5 +23,5 @@ paste.onclick = () => {
             tabs[0].id,
             { code: 'document.body.style.backgroundColor = "' + color + '";'}
         )
-    })
+    })*/
 }
