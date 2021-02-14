@@ -1,18 +1,20 @@
 {
     "name": "CSBridge",
     "version": "1.0",
-    "description": "A tool",
-    "permissions": [
-        "activeTab", 
-        "declarativeContent", 
-        "storage"
-    ],
+    "description": "A tool to propogate data to Campus Ship.",
     "background": {
-        "scripts": ["main.js"],
-        "persistent": false
+        "service_worker": "background.js"
     },
-    "page_action": {
-        "default_popup": "UI.html"
-    },
-    "manifest_version": 2
+    "content_scripts": [
+        {
+            "matches": ["https://velktri.github.io/CSBRidge/testing/source.html"],
+            "js": ["source_content.js"]
+        },
+        {
+            "matches": ["https://velktri.github.io/CSBRidge/testing/destination.html"],
+            "js": ["destination_content.js"]
+        }
+    ],
+
+    "manifest_version": 3
 }

@@ -1,5 +1,5 @@
-scanner.onclick = () => {
-    document.getElementById("name").innerHTML = "John Doe"
-    document.getElementById("address").innerHTML = "123 Main ST apt 1"
-    document.getElementById("zipcode").innerHTML = "1234567"
+document.getElementById("pr_scannedIDForwardSubmit").onclick = () => {
+    document.getElementById("shippingAddressL1").innerHTML = "55555 PRETEND PL SW; ; "
+    document.getElementById("shippingAddressL2").innerHTML = "CITYLAND,"
+    document.getElementById("zipCode").innerHTML = "12345-6789"
 }

@@ -1,0 +1,261 @@
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9;">
+	<!-- sb AppLayout -->
+	<title>Package Exceptions </title>
+
+
+	<!-- begin GlobalEnvironmentPageletLayout1 -->
+
+	<link rel="shortcut icon"
+		href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/images/favicon._CB485934341_.ico">
+	<link rel="stylesheet" type="text/css"
+		href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/css/common._CB451488087_.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/css/main._CB485927055_.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/css/jquery-1.8.14/jquery-ui-1.8.14.custom._CB485973066_.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/css/tickerHelper._CB485934220_.css">
+
+
+	<style type="text/css">
+		.devider,
+		.downarrow,
+		.logistics_small,
+		a.logo-logistics,
+		.nav-button-outer-open .left_active,
+		.nav-button-outer-open .right_active,
+		.rightmenu_a .left_active,
+		.rightmenu_a .right_active,
+		.rightmenu_a .welcometxt,
+		.vseperator,
+		.menu_container,
+		.shadowimg,
+		#nav-searchfield-outer,
+		#nav-search-button,
+		#nav-search-in .nav-down-arrow,
+		#nav-search-in:hover,
+		#nav-searchfield-inner,
+		#nav_services_cats_wrap a.nav_a:hover,
+		.nav_browse_ul li.nav_active,
+		.active_link,
+		.footer-content .footer-text,
+		.accordian_collapse,
+		.accordian_expanded,
+		.nav-button-outer-open .logowrap {
+			background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/images/nav_sprite._CB485920090_.png");
+		}
+
+		.nav_pop_tl,
+		.nav_pop_tr,
+		.nav_pop_tc,
+		.nav_pop_bc {
+			background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/images/nav-pop1._CB485933616_.png");
+		}
+
+		.nav_pop_cl,
+		.nav_pop_cr,
+		.nav_pop_bl,
+		.nav_pop_br,
+		.seperator,
+		.left_sep {
+			background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/images/nav-pop2._CB485946477_.png");
+		}
+	</style>
+</head>
+
+<body>
+	<!--Content-->
+	<div id="content">
+		<div id="pageContentContainer">
+			<div id="pageContent">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/AsinRecommendation._CB485924479_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/MissortExtUserRequest._CB485916897_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/alui_base._CB485949307_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/alui_skin._CB485968430_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/jquery-ui._CB485973402_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/workflow_status._CB485936972_.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/css/ForwardView._CB485921803_.css">
+
+				<div id="pr_container" class="alui-skin" style="display: block;">
+					<div>
+						<!-- dynamic div -->
+						<div class="workflow_container" style="height: 85%;">
+							<div class="clear"></div>
+							<div class="clear"></div>
+
+							<!-- Display the workflow item -->
+							<div class="pr_workflow_item" id="pr_wf_item_container" style="display: block;">
+								<div>
+									<div class="pr_step_label_view">
+										<h3 class="pr_step_heading_view">Individual Processing</h3>
+										<p class="pr_step_description_view">Scan or enter the package ID and verify the
+											details.Select a reason for exception and then choose to forward or return
+											the package.</p>
+									</div>
+									<hr id="divSeparator" class="bSep">
+									<div id="pr_scanIdForwardForm" onsubmit="return false;">
+										<h3 class="pr_box_description_view">Package/Tracking ID:</h3>
+										<input type="text" name="singleProcessScannedID" id="singleProcessScannedID"
+											value="" placeholder="Scan/Enter the ID"> <a id="pr_scannedIDForwardSubmit" class="aluiBtn standardBtn">Go</a>
+									</div>
+									<p id="reporting_country_single_process">NA</p>
+								</div>
+								<hr class="bSep">
+								<div id="forwardSummary">
+									<span
+										style="width: 100%; float: left; padding-left: 10px; padding-top: 5; padding-bottom: 10px"><label
+											id="packageDetails">Package details:</label></span>
+									<div id="forwardDetails" style="border: 1px solid; border-radius: 5px">
+										<div id="forwardDetailLeftCol" style="visibility: visible;">
+											<div id="forwardShipAddress" style="width: auto;">
+												<label class="forwardDetailHeading" id="forwardAddressLabel">Shipping
+													address:</label>
+												<div id="addressDetails">
+													<span style="width: 100%; float: left"><label id="shippingAddressL1"
+															class="forwardDetailValue"></label></span>
+													<span style="width: 100%; float: left"><label id="shippingAddressL2"
+															class="forwardDetailValue"></label></span>
+													<span style="width: 100%; float: left"><label id="shippingAddressL3"
+															class="forwardDetailValue">United States</label></span>
+												</div>
+											</div>
+											<div id="forwardZipCode">
+												<label class="forwardDetailHeading">Zip Code:</label> <label
+													class="forwardDetailValue" id="zipCode"></label>
+											</div>
+										</div>
+										<div id="forwardDetailRightCol" style="visibility: visible;">
+											<div id="forwardDetailtopTwoCol">
+												<label class="forwardDetailHeading">Original delivery date:</label>
+												<label id="originalDelivery" class="forwardDetailValue"
+													style="float: left;">2/17/2021</label>
+											</div>
+											<div id="forwardDetailBottomTwoCol">
+												<label class="forwardDetailHeading">Restriction :</label> <label
+													id="hazmatRestriction" class="forwardDetailValue">NONE</label>
+											</div>
+										</div>
+										<div id="hazmatImage" style="visibility: hidden;">
+											<div>
+												<img style="width: 130px; height: 80px;" id="scanImageDisplay"
+													alt="Bar code to be scanned"
+													src="https://images-na.ssl-images-amazon.com/images/G/01/TransCentral/asinRecommendation/images/hazmat._V354460105_.png">
+											</div>
+											<div>
+												<p>Hazmat! Do not forward via Air Method, use only ground method.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr class="bSep">
+								<div id="individualProcessViewOneCancal" style="visibility: hidden; height: 0px;">
+									<a href="javascript: void(0);" class="aluiBtn standardBtn"
+										id="singleProcessCancel">Cancel</a>
+								</div>
+								<div id="singleProcessReasonSelector" style="visibility: visible; height: auto;">
+									<label id="selectExceptionReasonLabel">Select exception reason:</label>
+									<div class="reasonSelector">
+										<div class="exv">
+											<div class="forward_reason_selector_heading" id="missortIndividualReason"
+												style="background-color: rgb(241, 241, 241);">
+												<input type="radio" class="one" name="reason" id="reason_missort">
+												<label class="reasonLabel">Missort</label>
+											</div>
+											<br>
+											<br>
+											<p class="description">Package was processed incorrectly</p>
+										</div>
+										<div class="exv">
+											<div class="forward_reason_selector_heading" id="labelIssueIndividualReason"
+												style="background-color: rgb(241, 241, 241);">
+												<input type="radio" class="one" name="reason" id="reason_label_issue">
+												<label class="reasonLabel">Label Issue</label>
+											</div>
+											<br>
+											<br>
+											<p class="description">Label is damaged or missing</p>
+										</div>
+										<div class="exv">
+											<div class="forward_reason_selector_heading" id="damagedIndividualReason"
+												style="background-color: rgb(241, 241, 241);">
+												<input type="radio" class="one" name="reason" id="reason_damaged">
+												<label class="reasonLabel">Damaged</label>
+											</div>
+											<br>
+											<br>
+											<p class="description">Package or contents are damaged</p>
+										</div>
+									</div>
+								</div>
+
+								<div id="forwardPackageDetails" style="visibility: hidden; height: 0px;">
+									<hr class="bSep">
+									<label id="forwardDetailLabel">Forwarding details:</label>
+									<div style="border: 1px solid; border-radius: 5px" id="forwardDetailValues">
+										<div id="newCarrier">
+											<label class="forwardPackageDetailLabel">New Carrier :</label> <select
+												class="alui-skin" id="newCarrierOptions">
+
+
+												<option value="AMZL">AMZL</option>
+											</select>
+										</div>
+										<div id="newTrackingId">
+											<label class="forwardPackageDetailLabel">New package/tracking ID :</label>
+											<input type="text" placeholder="New Tracking Id" value=""
+												id="scannedForwardID" name="scannedID" style="cursor: text;">
+										</div>
+									</div>
+								</div>
+								<div class="a-box-inner" id="successAlert"
+									style="visibility: hidden; height: 0px; margin-bottom: 0px;">
+									<i class="a-icon a-icon-alert a-icon-success"
+										style="float: left; margin-top: 20px; margin-left: 1%"></i>
+									<h4 id="individual_success_heading"></h4>
+									<p id="individual_success_description" class="a-last"></p>
+								</div>
+
+								<div id="errorMessage" style="width: auto; height: 0px; visibility: hidden;"
+									class="ui-dialog-content ui-widget-content">
+									<hr class="bSep">
+									<div id="network-error-box" class="a-box a-alert-error">
+										<div id="networkErrorMessage" class="a-box-inner">
+											<i class="a-icon a-icon-alert a-icon-error"></i>
+											<h4>Network or Connection Problem</h4>
+											<p class="a-last">Please scan and process this package again</p>
+										</div>
+									</div>
+								</div>
+								<div id="successScreenActions" style="visibility: hidden; height: 0px;">
+									<a href="javascript: void(0);" class="aluiBtn standardBtn"
+										id="singleProcessFinish">Finish</a> <a href="javascript: void(0);"
+										class="aluiBtn primaryBtn" id="singleProcessRestart">Process another package</a>
+								</div>
+								<div id="singleProcessActionButtons" style="visibility: visible; height: auto;">
+									<hr class="bSep">
+									<a href="javascript: void(0);" class="aluiBtn standardBtn"
+										id="singleProcessclear_data">Clear data</a> <a href="javascript: void(0);"
+										class="aluiBtn standardBtn" id="singleProcessCancelAction">Cancel</a> <a
+										href="javascript: void(0);" class="primaryBtn primaryDisBtn"
+										id="singleProcessForwardPackage">Forward Package</a> <a
+										href="javascript: void(0);" class="standardBtn primaryDisBtn"
+										id="singleProcessReturnPackage">Return Package</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="scanner.js"></script>
+</body>
