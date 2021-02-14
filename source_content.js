@@ -5,7 +5,7 @@ document.getElementById("pr_scannedIDForwardSubmit").onclick = () => {
         zip: document.getElementById("zipCode").innerHTML
     }
 
-    chrome.runtime.sendMessage({ action: "sendScanData", scannerData: JSON.stringify(dataObj) }, (response) => {
+    chrome.runtime.sendMessage({ action: "sendScanData", scannerData: dataObj }, (response) => {
         console.log(response)
     })
 }
